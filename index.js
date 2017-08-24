@@ -20,7 +20,30 @@ app.get('/ajout', function (req, res) {
     });
 });
 
-//
+app.get('/index', function (req, res) {
+  res.render('index', {
+        event1 : {
+            titre : "Cat-sitting de chatons",
+            auteur : "Visiteur1",
+            lieu : "Grenoble",
+            description : "Je serai absent pour le week-end, je recherche quelqu'un pour s'occuper de mes chatons pendant mon absence, merci."
+        },
+        event2 : {
+            titre : "Championnats du monde de tunning de chaussettes",
+            auteur : "Visiteur2",
+            lieu : "Paris",
+            description : "Venez tricoter et tunner des paires de chaussettes pour avoir les pieds au chaud cet hiver."
+        },
+        event3 : {
+            titre : "Bricolage participatif",
+            auteur : "Visiteur1",
+            lieu : "Villeurbanne",
+            description : "Création d'un bar à diabolos réfrigéré dans la petite enclave de la salle de cours à Simplon"
+        }
+    });
+});
+
+//si un fichier html est demandé, mustache doit aller lire un fichier template sur le disque et entrer en action (ou transmettre un message d'erreur)
 app.engine("html", function(path, options, callback) {
     fs.readFile(path, function(err, content) {
         if (err) {
@@ -31,10 +54,10 @@ app.engine("html", function(path, options, callback) {
         return callback(null, str);
     }) ;
 });
-
-//définition (en chemin relatif) du dossier où mustache doit travailler, et sur quel type de fichier
+//définition (en chemin relatif) du dossier où mustache doit aller chercher ses templates, et sur quel type de fichier travailler
 app.set('views', 'template/');
 app.set('view engine', 'html');
+
 
 //création d'une écoute sur le port 8008
 app.listen(8008, function(err) {
@@ -42,5 +65,5 @@ app.listen(8008, function(err) {
         console.error(err) ;
         return ;
     }
-    console.log('Le serveur écoute actuellement sur le port 8008...');
+    console.log('Le serveur accepte actuellement de recevoir des requêtes sur le port 8008...');
 });
