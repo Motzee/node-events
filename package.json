@@ -23,6 +23,7 @@
   "homepage": "https://github.com/Motzee/node-events#readme",
   "dependencies": {
     "express": "^4.15.4",
-    "fs": "0.0.1-security"
+    "fs": "0.0.1-security",
+    "mustache": "^2.3.0"
   }
 }
