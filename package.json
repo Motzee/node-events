@@ -1,0 +1,28 @@
+{
+  "name": "node-events",
+  "version": "1.0.0",
+  "description": "Projet sous Node avec serveur Express pour un min-site de gestion d'événements",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Motzee/node-events.git"
+  },
+  "keywords": [
+    "events",
+    "nodeJS",
+    "express"
+  ],
+  "author": "Selma et LaLicorne",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Motzee/node-events/issues"
+  },
+  "homepage": "https://github.com/Motzee/node-events#readme",
+  "dependencies": {
+    "express": "^4.15.4",
+    "fs": "0.0.1-security"
+  }
+}
