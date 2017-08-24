@@ -20,26 +20,32 @@ app.get('/ajout', function (req, res) {
     });
 });
 
+//création d'une base de données temporaire pour tests
+let bdEvents = [
+    {
+        titre : "Cat-sitting de chatons",
+        auteur : "Visiteur1",
+        lieu : "Grenoble",
+        description : "Je serai absent pour le week-end, je recherche quelqu'un pour s'occuper de mes chatons pendant mon absence, merci."
+    },
+    {
+        titre : "Championnats du monde de tunning de chaussettes",
+        auteur : "Visiteur2",
+        lieu : "Paris",
+        description : "Venez tricoter et tunner des paires de chaussettes pour avoir les pieds au chaud cet hiver."
+    },
+    {
+        titre : "Bricolage participatif",
+        auteur : "Visiteur1",
+        lieu : "Villeurbanne",
+        description : "Création d'un bar à diabolos réfrigéré dans la petite enclave de la salle de cours à Simplon"
+    }
+];
+
 app.get('/index', function (req, res) {
   res.render('index', {
-        event1 : {
-            titre : "Cat-sitting de chatons",
-            auteur : "Visiteur1",
-            lieu : "Grenoble",
-            description : "Je serai absent pour le week-end, je recherche quelqu'un pour s'occuper de mes chatons pendant mon absence, merci."
-        },
-        event2 : {
-            titre : "Championnats du monde de tunning de chaussettes",
-            auteur : "Visiteur2",
-            lieu : "Paris",
-            description : "Venez tricoter et tunner des paires de chaussettes pour avoir les pieds au chaud cet hiver."
-        },
-        event3 : {
-            titre : "Bricolage participatif",
-            auteur : "Visiteur1",
-            lieu : "Villeurbanne",
-            description : "Création d'un bar à diabolos réfrigéré dans la petite enclave de la salle de cours à Simplon"
-        }
+        name : 'Visiteur',
+        listeEvents : bdEvents 
     });
 });
 
