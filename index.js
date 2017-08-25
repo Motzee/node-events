@@ -52,6 +52,14 @@ app.get('/index', function (req, res) {
     });
 });
 
+app.get('/login', function (req, res) {
+  res.render('login');
+});
+
+app.get('/signin', function (req, res) {
+  res.render('signin');
+});
+
 //si un fichier html est demandé, mustache doit aller lire un fichier template sur le disque et entrer en action (ou transmettre un message d'erreur)
 app.engine("html", function(path, options, callback) {
     fs.readFile(path, function(err, content) {
