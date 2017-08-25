@@ -16,7 +16,7 @@
     </header>
     <p>Bonjour {{name}}, veuillez remplir ce formulaire afin de créer un nouvel Evenement !</p>
 
-    <form action="ajout.html" method="POST">
+    <form action="ajout/" method="POST">
         <div class="form-group">
             <label for="title">Title :</label>
             <input class="form-control" type="text" name="titre" placeholder="Title of the event">
@@ -33,7 +33,7 @@
 
         <div class="form-group">
             <label for="textarea">Message :</label>
-            <textarea class="form-control" id="textarea" rows="15" cols="50" placeholder="Write something here !"></textarea>
+            <textarea class="form-control" name="message" rows="15" cols="50" placeholder="Write something here !"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Create</button>
     </form>
