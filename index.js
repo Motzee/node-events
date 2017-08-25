@@ -24,18 +24,21 @@ app.get('/ajout', function (req, res) {
 let bdEvents = [
     {
         titre : "Cat-sitting de chatons",
+        dateEvents : "03/09/2017",
         auteur : "Visiteur1",
         lieu : "Grenoble",
         description : "Je serai absent pour le week-end, je recherche quelqu'un pour s'occuper de mes chatons pendant mon absence, merci."
     },
     {
         titre : "Championnats du monde de tunning de chaussettes",
+        dateEvents : "04/09/2017",
         auteur : "Visiteur2",
         lieu : "Paris",
         description : "Venez tricoter et tunner des paires de chaussettes pour avoir les pieds au chaud cet hiver."
     },
     {
         titre : "Bricolage participatif",
+        dateEvents : "03/09/2017",
         auteur : "Visiteur1",
         lieu : "Villeurbanne",
         description : "Création d'un bar à diabolos réfrigéré dans la petite enclave de la salle de cours à Simplon"
